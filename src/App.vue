@@ -1,6 +1,14 @@
 <template>
   <div id="app">
     <transtion name="slide-fade">
+      <header>
+        <div>全栈工坊</div>
+        <ul>
+          <li>技术博客</li>
+          <li>问答</li>
+          <li>实习内推</li>
+        </ul>
+      </header>
       <router-view/>
     </transtion>
   </div>
@@ -14,6 +22,7 @@
 
 <style lang="scss">
   @import "assets/scss/reset";
+
   .slide-fade-enter-active {
     transition: all .3s ease;
   }
