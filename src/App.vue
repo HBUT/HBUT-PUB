@@ -8,6 +8,10 @@
           <li>问答</li>
           <li>实习内推</li>
         </ul>
+        <ul>
+          <li>登录</li>
+          <li>注册</li>
+        </ul>
       </header>
       <router-view/>
     </transtion>
@@ -15,9 +19,9 @@
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+  export default {
+    name: 'App'
+  }
 </script>
 
 <style lang="scss">
