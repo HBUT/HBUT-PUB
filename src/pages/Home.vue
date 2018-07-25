@@ -18,8 +18,4 @@ export default {
 
 <style scoped lang="scss">
   @import "../assets/scss/home";
-
-  .header {
-    height: 300px;
-  }
 </style>
