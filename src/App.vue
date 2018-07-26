@@ -10,7 +10,7 @@
             <li>问答</li>
           </ul>
           <ul>
-            <li>登录</li>
+            <li><router-link :to="{name: 'Login'}">登录</router-link></li>
             <li>注册</li>
           </ul>
           <div :class="['ic ic-hanbao']" @click="toggleMenu"></div>
@@ -18,7 +18,7 @@
             <li>实习内推</li>
             <li>技术博客</li>
             <li>问答</li>
-            <li>登录</li>
+            <li><router-link :to="{name: 'Login'}">登录</router-link></li>
             <li>注册</li>
           </ol>
         </header>
