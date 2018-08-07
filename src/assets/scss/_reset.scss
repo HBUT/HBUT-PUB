@@ -1,3 +1,4 @@
+@import "common";
 
 html {
   font-size: 12px;
@@ -44,8 +45,8 @@ ol {
   padding: 0;
 }
 
-a:active,a:hover {
-  outline-width: 0
+a:hover, a:visited, a:link, a:active {
+  text-decoration: none;
 }
 
 abbr[title] {
@@ -195,15 +196,11 @@ textarea {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: #909090
 }
 
-a:hover {
-  color: #007fff
-}
 
 button {
-  list-style: 1
+  list-style: 1;
 }
 
 button:disabled {
