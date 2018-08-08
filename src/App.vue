@@ -12,7 +12,7 @@
           </ul>
           <ul>
             <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
-            <li v-if="!isLogin">注册</li>
+            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
           </ul>
           <div :class="['ic ic-hanbao']" @click="toggleMenu"></div>
           <ol :class="{'animate-active': menuOn}">
@@ -21,7 +21,7 @@
             <li>问答</li>
             <li>表白墙</li>
             <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
-            <li v-if="!isLogin">注册</li>
+            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
           </ol>
         </header>
         <router-view/>

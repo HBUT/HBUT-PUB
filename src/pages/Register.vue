@@ -26,16 +26,11 @@
                maxlength="40">
       </div>
       <div class="form-submit">
-        <div class="form-submit-btn">登录</div>
-        <router-link class="form-register-btn" :to="{name: 'Register'}">还没注册？！hurry up！</router-link>
+        <div class="form-submit-btn">注册</div>
       </div>
       <div class="hr"></div>
       <div class="form-welcome">
         欢迎各位同学&nbsp;小站君爱你哟
-        <br>
-        希望这是个你喜欢的地方
-        <br>
-        提提问&nbsp;写写文&nbsp;收获一段段友谊
       </div>
     </div>
   </div>
@@ -47,6 +42,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
+  @import "../assets/scss/register";
 </style>
