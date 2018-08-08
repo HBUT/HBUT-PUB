@@ -1,3 +1,21 @@
 .color-f {
   color: #fff;
 }
+
+%pos-left-center {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin wh($width, $height, $flag: n) {
+  @if($flag == w) {
+    width: $width * 1%;
+    height: $height * 1px;
+  } @else if($flag == h) {
+    width: $width * 1px;
+    height: $height * 1%;
+  } @else {
+    width: $width * 1px;
+    height: $height * 1px;
+  }
+}

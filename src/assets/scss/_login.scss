@@ -1,0 +1,123 @@
+@import "reset";
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  font-size: 14px;
+  color: #999;
+}
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-size: 14px;
+  color: #999;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-size: 14px;
+  color: #999;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-size: 14px;
+  color: #999;
+}
+
+.card-shadow {
+  position: relative;
+  @include wh(700, 491);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .05);
+  background: #fff;
+  margin: 40px auto;
+  padding: 120px;
+  border-radius: 4px;
+  .form-group-content {
+    border-bottom: 2px solid #f1f1f1;
+    margin-bottom: 10px;
+    .ipt-txt {
+      @include wh(100, 24, w);
+      line-height: 40px;
+      padding: 10px 0;
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  .form-title {
+    position: absolute;
+    font-size: 30px;
+    color: #333;
+    top: 40px;
+    text-align: center;
+    @extend %pos-left-center;
+  }
+  .form-submit {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    .form-submit-btn {
+      @include wh(122, 40);
+      background: rgba(0, 0, 0, 0.9);
+      color: #fff;
+      line-height: 40px;
+      text-align: center;
+      border-radius: 3px;
+    }
+    .form-register-btn {
+      font-size: 14px;
+      color: #666;
+      align-self: center;
+      text-decoration: underline;
+    }
+  }
+  .form-welcome {
+    position: absolute;
+    @extend %pos-left-center;
+    bottom: 50px;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+  }
+  .hr {
+    margin-top: 60px;
+    height: 2px;
+    border-bottom: 4px dashed #d2d2d2;
+  }
+}
+
+@media (max-width: 321px) {
+  .card-shadow {
+    @include wh(96, 380, w);
+    margin: 10px auto 0;
+    padding: 20px;
+    .form-title {
+      display: none;
+    }
+    .form-submit {
+      .form-submit-btn {
+        width: 80px;
+      }
+    }
+    .form-welcome {
+      width: 100%;
+    }
+    .hr {
+      margin-top: 40px;
+    }
+  }
+}
+
+@media (max-width: 415px) and (min-width: 322px) {
+  .card-shadow {
+    margin: 10px auto 0;
+    @include wh(96, 400, w);
+    padding: 20px;
+    .form-title {
+      display: none;
+    }
+    .form-submit {
+      .form-submit-btn {
+        font-size: 16px;
+      }
+    }
+  }
+}

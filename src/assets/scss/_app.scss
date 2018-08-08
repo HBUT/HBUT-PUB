@@ -48,8 +48,16 @@
 }
 
 @media (max-width: 415px) {
+  #app {
+    width: 100vw;
+    overflow-x: hidden;
+  }
   .head > ul {
     display: none;
+  }
+  
+  .color-f {
+    color: #333;
   }
 
   .head {
@@ -74,6 +82,7 @@
       background: rgba(255, 255, 255, .9);
       color: #000;
       transition: all .2s linear;
+      z-index: 10;
       &.animate-active {
         right: 0;
       }

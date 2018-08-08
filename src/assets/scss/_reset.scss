@@ -12,10 +12,12 @@ html {
 body {
   overflow-y: scroll;
   margin: 0;
+  font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif;
 }
 
-article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary,div {
   display: block;
+  box-sizing: border-box;
 }
 
 audio,canvas,progress,video {

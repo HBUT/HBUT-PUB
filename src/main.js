@@ -10,7 +10,7 @@ import store from './store'
 
 Vue.config.productionTip = false
 Vue.use(VueCookie)
-Vue.prototype.$http = axios
+Vue.prototype.$http = axios.create()
 
 /* eslint-disable no-new */
 new Vue({
