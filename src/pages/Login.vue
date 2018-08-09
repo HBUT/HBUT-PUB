@@ -35,7 +35,8 @@
 </template>
 
 <script>
-import {LOGIN} from "../api_routes"
+import { mapActions } from 'vuex'
+import { LOGIN } from '../api_routes'
 
 export default {
   name: `Login`,
@@ -46,6 +47,9 @@ export default {
     }
   },
   methods: {
+    ...mapActions([
+      'loginAction'
+    ]),
     login () {
       const data = {
         userName: this.userName,
@@ -56,7 +60,8 @@ export default {
         data
       })
         .then(res => {
-
+          this.loginAction(res.data)
+          this.$cookie.set('user_id', res.data.id.toString(), { expires: 1 })
         })
     }
   }

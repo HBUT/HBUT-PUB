@@ -18,7 +18,7 @@ export default class Ajax {
   }
 
   post (data) {
-    return this.instance.post(data.path, data.data || {}, data.config || {})
+    return this.instance.post(data.url, data.data || {}, data.config || {})
   }
 
   get (data) {
