@@ -4,7 +4,7 @@ import Home from '@/pages/Home/Home'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
 import User from '@/pages/User'
-import Recommend from '@/pages/Home/Recommend'
+import Recommend from '@/pages/Home/JobList'
 
 Vue.use(Router)
 

@@ -7,6 +7,11 @@
   transform: translateX(-50%);
 }
 
+%just-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 @mixin wh($width, $height, $flag: n) {
   @if($flag == w) {
     width: $width * 1%;
@@ -18,4 +23,23 @@
     width: $width * 1px;
     height: $height * 1px;
   }
+}
+
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.ellipsis2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
 }
