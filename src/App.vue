@@ -5,7 +5,7 @@
         <header class="head">
           <div class="logo-text">湖工小站</div>
           <ul class="first--ul">
-            <li>实习内推</li>
+            <li><router-link class="color-f" :to="{name: 'Recommend'}">实习内推</router-link></li>
             <li>技术博客</li>
             <li>问答</li>
             <li>表白墙</li>
