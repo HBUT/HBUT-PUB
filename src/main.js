@@ -2,15 +2,15 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueCookie from 'vue-cookie'
-import axios from 'axios'
 
 import App from './App'
 import router from './router'
 import store from './store'
+import Ajax from './api/Ajax'
 
 Vue.config.productionTip = false
 Vue.use(VueCookie)
-Vue.prototype.$http = axios.create()
+Vue.prototype.$http = new Ajax()
 
 /* eslint-disable no-new */
 new Vue({

@@ -5,8 +5,8 @@
       <div class="form-group-content">
         <input type="text"
                placeholder="输入登录用户名"
-               name="name"
-               v-model="name"
+               name="userName"
+               v-model="userName"
                class="ipt-txt"
                maxlength="12">
       </div>
@@ -36,7 +36,13 @@
 
 <script>
 export default {
-  name: `Login`
+  name: `Login`,
+  data() {
+    return {
+      userName: '',
+      password: ''
+    }
+  }
 }
 </script>
 
