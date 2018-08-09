@@ -7,21 +7,21 @@ import axios from 'axios'
 import {REQUEST_URL} from '../config'
 
 export default class Ajax {
-  constructor() {
+  constructor () {
     this.instance = axios.create({
       baseURL: REQUEST_URL
     })
   }
 
-  setToken(token) {
+  setToken (token) {
     this.instance.defaults.headers.common['Authorization'] = token
   }
 
-  post(data) {
+  post (data) {
     return this.instance.post(data.path, data.data, data.config)
   }
 
-  get(data) {
+  get (data) {
     return this.instance.get(data.url, {params: data.data, ...data.config})
   }
 }
