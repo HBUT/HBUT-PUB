@@ -1,2 +1,2 @@
-export const login = `/user/login`
-export const register = `/user/register`
+export const login = `/user/login` // POST
+export const register = `/user/register` // POST
