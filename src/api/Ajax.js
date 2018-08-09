@@ -22,7 +22,6 @@ export default class Ajax {
   }
 
   get(data) {
-    this.config.params = this.data
     return this.instance.get(data.url, {params: data.data, ...data.config})
   }
 }
