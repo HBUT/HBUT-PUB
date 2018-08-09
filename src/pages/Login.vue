@@ -19,7 +19,7 @@
                maxlength="40">
       </div>
       <div class="form-submit">
-        <div class="form-submit-btn">登录</div>
+        <div class="form-submit-btn" @click="login">登录</div>
         <router-link class="form-register-btn" :to="{name: 'Register'}">还没注册？！hurry up！</router-link>
       </div>
       <div class="hr"></div>
@@ -35,12 +35,29 @@
 </template>
 
 <script>
+import {LOGIN} from "../api_routes"
+
 export default {
   name: `Login`,
   data () {
     return {
       userName: '',
       password: ''
+    }
+  },
+  methods: {
+    login () {
+      const data = {
+        userName: this.userName,
+        password: this.password
+      }
+      this.$http.post({
+        url: LOGIN,
+        data
+      })
+        .then(res => {
+
+        })
     }
   }
 }
