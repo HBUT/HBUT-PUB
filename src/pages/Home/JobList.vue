@@ -24,16 +24,20 @@
         </li>
       </ul>
     </template>
-    <template></template>
+    <template v-else>
+      <div class="loading">加载中</div>
+    </template>
   </div>
 </template>
 
 <script>
+import { LIST_PRACTICE_BY_TYPE } from '../../api_routes'
+
 export default {
   name: 'Recommend',
   data () {
     return {
-      loading: false,
+      loading: true,
       jobs: [
         {
           id: 0,
@@ -49,8 +53,16 @@ export default {
           pv: 9999,
           upvote_count: 6
         }
-      ]
+      ],
+      searchOptions: {
+        typeId: 0,
+        pageIndex: 0,
+        pageSize: 20
+      }
     }
+  },
+  mounted () {
+
   },
   computed: {
     jobsFilter () {
@@ -62,6 +74,14 @@ export default {
           item.upvote_count = '999+'
         }
         return item
+      })
+    }
+  },
+  methods: {
+    fetchData () {
+      this.$http.get({
+        url: LIST_PRACTICE_BY_TYPE,
+        data: this.searchOptions
       })
     }
   }

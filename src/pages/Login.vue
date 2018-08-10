@@ -60,8 +60,8 @@ export default {
         data
       })
         .then(res => {
-          this.loginAction(res.data)
-          this.$cookie.set('user_id', res.data.id.toString(), { expires: 1 })
+          this.loginAction(res.data.data)
+          this.$cookie.set('user_id', res.data.data.id.toString(), { expires: 1 })
         })
     }
   }

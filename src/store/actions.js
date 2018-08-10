@@ -18,5 +18,5 @@ export const loginAction = function ({commit}, loginInfo) {
  * @param commit
  */
 export const clearLoginAction = function ({commit}) {
-  commit('clearLoginMutaion')
+  commit('clearLoginMutation')
 }

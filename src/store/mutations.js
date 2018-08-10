@@ -5,10 +5,10 @@
  */
 
 export default {
-  loginMutaion (state, loginInfo) {
+  loginMutation (state, loginInfo) {
     state.loginInfo = loginInfo
   },
-  clearLoginMutaion (state) {
+  clearLoginMutation (state) {
     state.loginInfo = {}
   }
 }

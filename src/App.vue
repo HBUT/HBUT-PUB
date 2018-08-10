@@ -10,9 +10,12 @@
             <li>问答</li>
             <li>表白墙</li>
           </ul>
-          <ul>
-            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
-            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
+          <ul v-if="!isLogin">
+            <li><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
+            <li><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
+          </ul>
+          <ul v-else>
+            <li>{{loginInfo.userName}}</li>
           </ul>
           <div :class="['ic ic-hanbao']" @click="toggleMenu"></div>
           <ol :class="{'animate-active': menuOn}">
@@ -20,8 +23,13 @@
             <li>技术博客</li>
             <li>问答</li>
             <li>表白墙</li>
-            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
-            <li v-if="!isLogin"><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
+            <template v-if="!isLogin">
+              <li><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
+              <li><router-link class="color-f" :to="{name: 'Register'}">注册</router-link></li>
+            </template>
+            <template v-else>
+              <li>{{loginInfo.userName}}</li>
+            </template>
           </ol>
         </header>
         <router-view/>
@@ -38,9 +46,15 @@ export default {
       menuOn: false
     }
   },
+  created () {
+    this.$router.replace({name: 'JobList'})
+  },
   computed: {
     isLogin () {
-      return this.$store.state.isLogin
+      return !!this.$store.state.loginInfo.id || !!this.$cookie.get('user_id')
+    },
+    loginInfo () {
+      return this.$store.state.loginInfo
     }
   },
   methods: {

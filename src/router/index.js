@@ -4,7 +4,7 @@ import Home from '@/pages/Home/Home'
 import Login from '@/pages/Login'
 import Register from '@/pages/Register'
 import User from '@/pages/User'
-import Recommend from '@/pages/Home/JobList'
+import JobList from '@/pages/Home/JobList'
 
 Vue.use(Router)
 
@@ -19,9 +19,9 @@ export default new Router({
       component: Home,
       children: [
         {
-          path: 'recommend',
-          name: 'Recommend',
-          component: Recommend
+          path: '/joblist',
+          name: 'JobList',
+          component: JobList
         }
       ]
     }, {
