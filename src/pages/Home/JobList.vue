@@ -34,7 +34,7 @@
 import { LIST_PRACTICE_BY_TYPE } from '../../api_routes'
 
 export default {
-  name: 'Recommend',
+  name: 'JobList',
   data () {
     return {
       loading: true,
@@ -56,13 +56,13 @@ export default {
       ],
       searchOptions: {
         typeId: 0,
-        pageIndex: 0,
+        pageIndex: 1,
         pageSize: 20
       }
     }
   },
   mounted () {
-
+    this.fetchData()
   },
   computed: {
     jobsFilter () {
@@ -83,6 +83,9 @@ export default {
         url: LIST_PRACTICE_BY_TYPE,
         data: this.searchOptions
       })
+        .then(res => {
+          this.loading = false
+        })
     }
   }
 }

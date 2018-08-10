@@ -37,6 +37,7 @@
 <script>
 import { mapActions } from 'vuex'
 import { LOGIN } from '../api_routes'
+import md5 from 'md5'
 
 export default {
   name: `Login`,
@@ -51,9 +52,15 @@ export default {
       'loginAction'
     ]),
     login () {
+      if (!this.userName.trim()) {
+        return alert('请输入用户名')
+      }
+      if (!this.password) {
+        return alert('请输入密码')
+      }
       const data = {
-        userName: this.userName,
-        password: this.password
+        userName: this.userName.trim(),
+        password: md5(this.password)
       }
       this.$http.post({
         url: LOGIN,
@@ -62,6 +69,7 @@ export default {
         .then(res => {
           this.loginAction(res.data.data)
           this.$cookie.set('user_id', res.data.data.id.toString(), { expires: 1 })
+          this.$cookie.set('userName', res.data.data.userName, {expires: 1})
         })
     }
   }

@@ -10,17 +10,14 @@ export default {
 
   },
   methods: {
-    // onPageScrollToBottom () {
-      // const scrollTop = this.getScrollTop()
-    // },
-    getScrollTop() {
-      var scrollTop = 0;
+    getScrollTop () {
+      var scrollTop = 0
       if (document.documentElement && document.documentElement.scrollTop) {
-        scrollTop = document.documentElement.scrollTop;
+        scrollTop = document.documentElement.scrollTop
       } else if (document.body) {
-        scrollTop = document.body.scrollTop;
+        scrollTop = document.body.scrollTop
       }
-      return scrollTop;
+      return scrollTop
     }
   }
 }
