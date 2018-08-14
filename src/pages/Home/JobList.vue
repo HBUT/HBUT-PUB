@@ -5,24 +5,26 @@
         <li v-for="job in jobsFilter" :key="job.id">
           <table class="left-content">
             <tbody>
-              <tr>
-                <td>{{job.likeCount}}</td>
-                <td>{{job.pv}}</td>
-                <td class="ellipsis2">
-                  <router-link class="job-title" :to="{name: 'JobDetail'}">
-                    {{job.companyCity}} | {{job.companyName}} | {{job.jobDesc}} | {{job.jobRequire}} | {{job.jobTitle}}
-                  </router-link>
-                </td>
-              </tr>
-              <tr>
-                <td>赞数</td>
-                <td>点击量</td>
-                <td>{{job.username}}</td>
-              </tr>
+            <tr>
+              <td>{{job.likeCount}}</td>
+              <td>{{job.pv}}</td>
+              <td class="ellipsis2">
+                <router-link class="job-title" :to="{name: 'JobDetail'}">
+                  {{job.companyCity}} | {{job.companyName}} | {{job.jobDesc}} | {{job.jobRequire}} | {{job.jobTitle}}
+                </router-link>
+              </td>
+            </tr>
+            <tr>
+              <td>赞数</td>
+              <td>点击量</td>
+              <td>{{job.username || '匿名用户'}}</td>
+            </tr>
             </tbody>
           </table>
         </li>
       </ul>
+      <div class="loading" @click="loadMore" v-if="!nomore">加载更多</div>
+      <div class="loading" v-if="nomore">没有更多了</div>
     </template>
     <template v-else>
       <div class="loading">加载中</div>
@@ -31,7 +33,7 @@
 </template>
 
 <script>
-import { LIST_PRACTICE_BY_TYPE } from '../../api_routes'
+import {LIST_PRACTICE_BY_TYPE} from '../../api_routes'
 
 export default {
   name: 'JobList',
@@ -43,10 +45,12 @@ export default {
         typeId: 0,
         pageIndex: 1,
         pageSize: 20
-      }
+      },
+      nomore: false
     }
   },
   mounted () {
+    this.initParams()
     this.fetchData()
   },
   computed: {
@@ -69,11 +73,28 @@ export default {
         data: this.searchOptions
       })
         .then(res => {
+          console.log(res)
+          let list = res.data.data.dataList
+          this.jobs = [...this.jobs, ...list]
+          let actualCount = list.length + (res.data.data.pageIndex - 1) * res.data.data.pageSize
+          this.nomore = actualCount >= res.data.data.totalCount
           this.loading = false
-          this.jobs = [...this.jobs, ...res.data.data.dataList]
         })
+    },
+    loadMore () {
+      this.searchOptions.pageIndex += 1
+      this.fetchData()
+    },
+    initParams () {
+      this.jobs = []
+      this.searchOptions = {
+        typeId: 0,
+        pageIndex: 1,
+        pageSize: 20
+      }
     }
   }
+
 }
 </script>
 
