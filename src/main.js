@@ -12,6 +12,10 @@ Vue.config.productionTip = false
 Vue.use(VueCookie)
 Vue.prototype.$http = new Ajax()
 
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

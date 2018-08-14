@@ -12,6 +12,7 @@
 }
 
 .head {
+  width: 100vw;
   height: 60px;
   background: rgba(0, 0, 0, .9);
   display: flex;
@@ -45,6 +46,12 @@
 
 .first--ul + ul {
   padding-right: 10px;
+}
+
+@media (min-width: 414px) and (max-width: 801px) {
+  .head {
+    width: 800px;
+  }
 }
 
 @media (max-width: 415px) {
