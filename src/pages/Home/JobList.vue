@@ -6,11 +6,11 @@
           <table class="left-content">
             <tbody>
               <tr>
-                <td>{{job.upvote_count}}</td>
+                <td>{{job.likeCount}}</td>
                 <td>{{job.pv}}</td>
                 <td class="ellipsis2">
                   <router-link class="job-title" :to="{name: 'JobDetail'}">
-                    {{job.title}}
+                    {{job.companyCity}} | {{job.companyName}} | {{job.jobDesc}} | {{job.jobRequire}} | {{job.jobTitle}}
                   </router-link>
                 </td>
               </tr>
@@ -38,22 +38,7 @@ export default {
   data () {
     return {
       loading: true,
-      jobs: [
-        {
-          id: 0,
-          title: '很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！',
-          username: '湖工小站君',
-          pv: 10,
-          upvote_count: 5
-        },
-        {
-          id: 1,
-          title: '很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！很长很长一段文字！！！',
-          username: '湖工小站君',
-          pv: 9999,
-          upvote_count: 6
-        }
-      ],
+      jobs: [],
       searchOptions: {
         typeId: 0,
         pageIndex: 1,
@@ -85,6 +70,7 @@ export default {
       })
         .then(res => {
           this.loading = false
+          this.jobs = [...this.jobs, ...res.data.data.dataList]
         })
     }
   }
