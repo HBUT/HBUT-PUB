@@ -1,0 +1,26 @@
+.job-form {
+  padding: 10px;
+  .editor-html {
+    background: #fff;
+    > div {
+      height: 500px;
+    }
+  }
+  .i {
+    width: 100%;
+    height: 30px;
+  }
+  .line {
+    margin: 10px auto;
+  }
+  .t-line {
+    margin: 5px auto;
+  }
+}
+
+@media (min-width: 800px) {
+  .job-form {
+    width: 800px;
+    margin: 0 auto;
+  }
+}

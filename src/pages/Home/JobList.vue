@@ -29,7 +29,7 @@
     <template v-else>
       <div class="loading">加载中</div>
     </template>
-    <div class="publish">+</div>
+    <div class="publish" @click="publish">+</div>
   </div>
 </template>
 
@@ -93,6 +93,9 @@ export default {
         pageIndex: 1,
         pageSize: 20
       }
+    },
+    publish () {
+      this.$router.push({name: 'JobForm'})
     }
   }
 

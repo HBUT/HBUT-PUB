@@ -25,6 +25,9 @@
   }
 }
 
+.csp {
+  cursor: pointer;
+}
 
 .ellipsis {
   overflow: hidden;
@@ -64,6 +67,14 @@
 
 .f18 {
   font-size: 18px;
+}
+
+// flex
+
+.fcb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 

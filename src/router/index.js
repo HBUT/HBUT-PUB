@@ -6,6 +6,7 @@ import Register from '@/pages/Register'
 import User from '@/pages/User'
 import JobList from '@/pages/Home/JobList'
 import JobDetail from '@/pages/Home/JobDetail'
+import JobForm from '@/pages/Home/JobForm'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
           path: '/jobdetail',
           name: 'JobDetail',
           component: JobDetail
+        },
+        {
+          path: '/jobform',
+          name: 'JobForm',
+          component: JobForm
         }
       ]
     }, {

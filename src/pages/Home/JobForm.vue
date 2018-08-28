@@ -1,28 +1,56 @@
 <template>
-  <div>
-    <div>
-      <div>context</div>
-      <quill-editor
-        v-model="context"
-        ref="myQuillEditor"
-        :options="editorOption"
-        @blur="onEditorBlur($event)"
-        @focus="onEditorFocus($event)"
-        @ready="onEditorReady($event)"
-        @change="onEditorChange">
-      </quill-editor>
+  <div class="job-form">
+    <div class="line">
+      <div>城市</div>
+      <div><input class="i" type="text" v-model="companyCity"></div>
+    </div>
+    <div class="line">
+      <div class="t-line">公司名</div>
+      <div><input class="i" type="text" v-model="companyName"></div>
+    </div>
+    <div class="line">
+      <div class="t-line">职业描述</div>
+      <div><input class="i" type="text" v-model="jobDesc"></div>
+    </div>
+    <div class="line">
+      <div class="t-line">技术关键词</div>
+      <div><input class="i" type="text" v-model="jobRequire"></div>
+    </div>
+    <div class="line">
+      <div class="t-line">职位</div>
+      <div><input class="i" type="text" v-model="jobTitle"></div>
+    </div>
+    <div class="editor-line">
+      <div class="t-line">内推信息录入</div>
+      <div class="fcb line">
+        <div class="csp" @click="choose(0)">选择markdown</div>
+        <div class="csp" @click="choose(1)">选择普通编辑器</div>
+      </div>
+      <div class="editor-html">
+        <quill-editor v-if="type == 1"
+          v-model="content"
+          ref="myQuillEditor"
+          :options="editorOption"
+          @blur="onEditorBlur($event)"
+          @focus="onEditorFocus($event)"
+          @ready="onEditorReady($event)"
+          @change="onEditorChange">
+        </quill-editor>
+      </div>
       <input style="display: none;" id="ideaShareFile" name="file" type="file" accept="image/*">
+      <mavon-editor v-if="type == 0" ref=md class="editor--input-file mt10" v-model="contextMD" @imgAdd="imgAdd"/>
     </div>
   </div>
 </template>
 
 <script>
-import {quillEditor} from "vue-quill-editor";
+import {quillEditor} from 'vue-quill-editor'
 
 export default {
-  name: 'RecommendForm',
-  data() {
+  name: 'JobForm',
+  data () {
     return {
+      type: 0,
       editorOption: {
         modules: {
           toolbar: {
@@ -45,9 +73,9 @@ export default {
             handlers: {
               image: function (value) {
                 if (value) {
-                  document.querySelector("#ideaShareFile").click();
+                  document.querySelector('#ideaShareFile').click()
                 } else {
-                  this.quill.format("image", false);
+                  this.quill.format('image', false)
                 }
               }
             }
@@ -58,10 +86,15 @@ export default {
   },
   components: {
     quillEditor
+  },
+  methods: {
+    choose (type) {
+      this.type = Number(type)
+    }
   }
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+  @import "../../assets/scss/jobform";
 </style>
