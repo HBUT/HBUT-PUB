@@ -67,9 +67,13 @@ export default {
         data
       })
         .then(res => {
-          this.loginAction(res.data.data)
-          this.$cookie.set('user_id', res.data.data.id.toString(), { expires: 1 })
-          this.$cookie.set('userName', res.data.data.userName, {expires: 1})
+          if (res.data.success) {
+            this.loginAction(res.data.data)
+            this.$cookie.set('user_id', res.data.data.id.toString(), { expires: 1 })
+            this.$cookie.set('userName', res.data.data.userName, {expires: 1})
+          } else {
+            alert(res.data.message || '密码错误')
+          }
         })
     }
   }
