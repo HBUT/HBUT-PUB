@@ -1,17 +1,20 @@
 <template>
   <div class="job-detail">
     <header class="title tc fw">{{title || 'test'}}</header>
-    <main class="main f16" v-html="content"></main>
+    <main class="main f16" v-html="content" v-if="type"></main>
+    <main class="main f16"></main>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'JobDetail',
   data () {
     return {
       title: '',
-      content: '<div>123</div>'
+      content: '<div>123</div>',
+      type: 1
     }
   }
 }
