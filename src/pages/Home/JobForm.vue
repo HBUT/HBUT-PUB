@@ -23,8 +23,8 @@
     <div class="editor-line">
       <div class="t-line">内推信息录入</div>
       <div class="fcb line">
-        <div class="csp" @click="choose(0)">选择markdown</div>
-        <div class="csp" @click="choose(1)">选择普通编辑器</div>
+        <div class="csp blue" @click="choose(0)">选择markdown</div>
+        <div class="csp blue" @click="choose(1)">选择普通编辑器</div>
       </div>
       <div class="editor-html">
         <quill-editor v-if="type == 1"
