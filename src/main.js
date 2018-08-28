@@ -7,14 +7,13 @@ import App from './App'
 import router from './router'
 import store from './store'
 import Ajax from './api/Ajax'
+import 'quill/dist/quill.core.css'
+import 'quill/dist/quill.snow.css'
+import 'quill/dist/quill.bubble.css'
 
 Vue.config.productionTip = false
 Vue.use(VueCookie)
 Vue.prototype.$http = new Ajax()
-
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
 
 /* eslint-disable no-new */
 new Vue({

@@ -6,6 +6,7 @@
 
 export default {
   loginMutation (state, loginInfo) {
+    console.log(loginInfo)
     state.loginInfo = loginInfo
   },
   clearLoginMutation (state) {

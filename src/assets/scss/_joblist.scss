@@ -67,3 +67,10 @@
   color: $primary-black;
   padding: 10px 0;
 }
+
+.publish {
+  position: fixed;
+  @include wh(50, 50);
+  border-radius: 50%;
+  background: #333;
+}

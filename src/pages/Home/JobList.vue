@@ -29,6 +29,7 @@
     <template v-else>
       <div class="loading">加载中</div>
     </template>
+    <div class="publish">+</div>
   </div>
 </template>
 
