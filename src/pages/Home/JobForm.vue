@@ -13,22 +13,18 @@
       <div><input class="i" type="text" v-model="jobDesc"></div>
     </div>
     <div class="line">
-      <div class="t-line">技术关键词</div>
-      <div><input class="i" type="text" v-model="jobRequire"></div>
-    </div>
-    <div class="line">
       <div class="t-line">职位</div>
       <div><input class="i" type="text" v-model="jobTitle"></div>
     </div>
     <div class="editor-line">
       <div class="t-line">内推信息录入</div>
-      <div class="fcb line">
-        <div class="csp blue" @click="choose(0)">选择markdown</div>
-        <div class="csp blue" @click="choose(1)">选择普通编辑器</div>
-      </div>
+      <!--<div class="fcb line">-->
+        <!--<div class="csp blue" @click="choose(0)">选择markdown</div>-->
+        <!--<div class="csp blue" @click="choose(1)">选择普通编辑器</div>-->
+      <!--</div>-->
       <div class="editor-html">
         <quill-editor v-if="type == 1"
-          v-model="content"
+          v-model="jobRequire"
           ref="myQuillEditor"
           :options="editorOption"
           @blur="onEditorBlur($event)"
@@ -50,7 +46,12 @@ export default {
   name: 'JobForm',
   data () {
     return {
-      type: 0,
+      type: 1,
+      companyCity: '',
+      companyName: '',
+      jobDesc: '',
+      jobTitle: '',
+      jobRequire: '',
       editorOption: {
         modules: {
           toolbar: {
