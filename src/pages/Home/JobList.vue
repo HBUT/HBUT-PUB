@@ -29,7 +29,7 @@
     <template v-else>
       <div class="loading">加载中</div>
     </template>
-    <div class="publish" @click="publish">+</div>
+    <div class="publish" @click="publish" v-if="publishBtn">+</div>
   </div>
 </template>
 
@@ -47,7 +47,8 @@ export default {
         pageIndex: 1,
         pageSize: 20
       },
-      nomore: false
+      nomore: false,
+      publishBtn: false
     }
   },
   mounted () {
