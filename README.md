@@ -1,11 +1,12 @@
-# HBUT-PUB
+## HBUT-PUB
 
-This project aims to be a place to share and fun.
-This is a small website for Hubei University of Technology students.
-There are some parts of the site more friendly to the students of computer science.
-However it's for all actually.
-Our Team is now working to complete it.
-if you want to contact me! You can find me at QQ:413807584 and mention the information "HBUT-PUB"
-while you add me a friend to your QQ friend list.
+本项目旨在提供一个平台，供同学们使用。即将开放实习内推模块，提供毕业学长的内推信息，请同学使用该平台时以学校的课程和安排为主，本平台
+发表的内容不代表任何官方观点，也不会提供任何消极信息，旨在提供一个促进大家学习交流的平台。如想为此项目做出贡献，请提issue或者联系
+413807584@qq.com。
+
+本项目开发的功能不会提供任何收费项目，如遇收费项目，请注意识别，谨防上当。
+
+如果你想要支持作者的服务器费用，成为一个supporter，可以转账至支付宝413807584@qq.com（子翔）赞赏。赞赏人将会显示在PC端网站首页，
+以滚动轮播方式展现。
 
 
