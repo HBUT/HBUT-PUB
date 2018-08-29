@@ -17,7 +17,8 @@
                v-model="password"
                class="ipt-txt"
                maxlength="40">
-      </div><div class="form-group-content">
+      </div>
+      <div class="form-group-content">
         <input type="password"
                placeholder="确认密码"
                name="repeatPassword"
