@@ -7,6 +7,10 @@
   border-radius: 4px;
   background: #fff;
   > li {
+    &:last-child {
+      margin-bottom: 0;
+    }
+    margin-bottom: 20px;
     tr:first-child {
       > td:nth-child(1) {
         width: 48px;

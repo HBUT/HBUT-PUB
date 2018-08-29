@@ -9,7 +9,7 @@
               <td>{{job.likeCount}}</td>
               <td>{{job.pv}}</td>
               <td class="ellipsis2">
-                <router-link class="job-title" :to="{name: 'JobDetail'}">
+                <router-link class="job-title" :to="{name: 'JobDetail', params: {id: job.id}}">
                   {{job.companyCity}} | {{job.companyName}} | {{job.jobDesc}} | {{job.jobRequire}} | {{job.jobTitle}}
                 </router-link>
               </td>

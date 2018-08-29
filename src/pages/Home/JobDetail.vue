@@ -7,15 +7,28 @@
 </template>
 
 <script>
+import { GET_PRACTICE_BY_ID } from '../../api_routes'
 
 export default {
   name: 'JobDetail',
   data () {
     return {
       title: '',
-      content: '<div>123</div>',
+      content: '',
       type: 1
     }
+  },
+  mounted () {
+    this.$http.get({
+      url: GET_PRACTICE_BY_ID,
+      data: {
+        id: this.$route.params.id
+      }
+    })
+      .then(res => {
+        this.title = res.data.data.jobTitle
+        this.content = res.data.data.jobRequire
+      })
   }
 }
 </script>
