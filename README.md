@@ -8,7 +8,4 @@ Our Team is now working to complete it.
 if you want to contact me! You can find me at QQ:413807584 and mention the information "HBUT-PUB"
 while you add me a friend to your QQ friend list.
 
-# 版权声明
-Copyright © 2017 - 2018 武汉乐纷享科技有限公司.All Rights Reserved.
-
 
