@@ -2,20 +2,17 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import VueCookie from 'vue-cookie'
-import mavonEditor from 'mavon-editor'
+// import mavonEditor from 'mavon-editor'
 
 import App from './App'
 import router from './router'
 import store from './store'
 import Ajax from './api/Ajax'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
-import 'mavon-editor/dist/css/index.css'
+// import 'mavon-editor/dist/css/index.css'
 
 Vue.config.productionTip = false
 Vue.use(VueCookie)
-Vue.use(mavonEditor)
+// Vue.use(mavonEditor)
 Vue.prototype.$http = new Ajax()
 
 /* eslint-disable no-new */

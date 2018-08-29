@@ -1,12 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/Home/Home'
-import Login from '@/pages/Login'
-import Register from '@/pages/Register'
-import User from '@/pages/User'
-import JobList from '@/pages/Home/JobList'
-import JobDetail from '@/pages/Home/JobDetail'
-import JobForm from '@/pages/Home/JobForm'
+const Home = () => import('../pages/Home/Home')
+const Login = () => import('../pages/Login')
+const Register = () => import('../pages/Register')
+const User = () => import('../pages/User')
+const JobList = () => import('../pages/Home/JobList')
+const JobDetail = () => import('../pages/Home/JobDetail')
+const JobForm = () => import('../pages/Home/JobForm')
 
 Vue.use(Router)
 
@@ -29,13 +29,12 @@ export default new Router({
           path: '/jobdetail',
           name: 'JobDetail',
           component: JobDetail
-        },
-        {
-          path: '/jobform',
-          name: 'JobForm',
-          component: JobForm
         }
       ]
+    }, {
+      path: '/jobform',
+      name: 'JobForm',
+      component: JobForm
     }, {
       path: '/login',
       name: 'Login',
