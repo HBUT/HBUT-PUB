@@ -6,7 +6,7 @@
           <div class="logo-text">湖工小站</div>
           <ul class="first--ul">
             <li><router-link class="color-f" :to="{name: 'JobList'}">实习内推</router-link></li>
-            <li @click="wait">技术博客</li>
+            <li><router-link class="color-f" :to="{name: 'ArticleList'}">技术博客</router-link></li>
             <li @click="wait">问答</li>
           </ul>
           <ul v-if="!loginName">
@@ -19,7 +19,7 @@
           <div :class="['ic ic-hanbao']" @click="toggleMenu"></div>
           <ol :class="{'animate-active': menuOn}">
             <li><router-link class="color-f" :to="{name: 'JobList'}">实习内推</router-link></li>
-            <li @click="wait">技术博客</li>
+            <li><router-link class="color-f" :to="{name: 'ArticleList'}">技术博客</router-link></li>
             <li @click="wait">问答</li>
             <template v-if="!loginName">
               <li><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
