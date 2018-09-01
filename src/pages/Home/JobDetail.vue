@@ -22,7 +22,7 @@ export default {
     this.$http.get({
       url: GET_PRACTICE_BY_ID,
       data: {
-        id: this.$route.params.id
+        id: this.$route.query.id
       }
     })
       .then(res => {

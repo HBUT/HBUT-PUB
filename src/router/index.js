@@ -20,6 +20,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
+      redirect: '/joblist',
       component: Home,
       children: [
         {

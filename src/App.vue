@@ -20,6 +20,7 @@
           <ol :class="{'animate-active': menuOn}">
             <li><router-link class="color-f" :to="{name: 'JobList'}">实习内推</router-link></li>
             <li><router-link class="color-f" :to="{name: 'ArticleList'}">技术博客</router-link></li>
+            <!--<li><router-link class="color-f" :to="{name: 'QA'}">问答</router-link></li>-->
             <li @click="wait">问答</li>
             <template v-if="!loginName">
               <li><router-link class="color-f" :to="{name: 'Login'}">登录</router-link></li>
@@ -43,9 +44,6 @@ export default {
     return {
       menuOn: false
     }
-  },
-  created () {
-    this.$router.replace({name: 'JobList'})
   },
   computed: {
     loginName () {
