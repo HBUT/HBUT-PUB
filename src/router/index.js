@@ -9,6 +9,7 @@ const JobDetail = () => import('../pages/Home/JobDetail')
 const JobForm = () => import('../pages/Home/JobForm')
 const ArticleList = () => import('../pages/Home/ArticleList')
 const ArticleDetail = () => import('../pages/Home/ArticleDetail')
+const QA = () => import('../pages/Home/QA')
 
 Vue.use(Router)
 
@@ -42,6 +43,11 @@ export default new Router({
           path: '/articledetail',
           name: 'ArticleDetail',
           component: ArticleDetail
+        },
+        {
+          path: '/qa',
+          name: 'QA',
+          component: QA
         }
       ]
     }, {

@@ -1,18 +1,15 @@
 <template>
   <div>
     <template v-if="!loading">
-      <ul class="rec-container" v-if="jobsFilter.length">
-        <li v-for="qa in list" :key="job.id">
+      <ul class="rec-container">
+        <li>
           <table class="left-content">
             <tbody>
             <tr>
-              <td>小林：</td>
-              <td></td>
-              <td class="ellipsis2">
-                <router-link class="job-title" :to="{name: 'JobDetail', params: {id: job.id}}">
-                  传说中的王者鸡爪，ogrk
-                </router-link>
-              </td>
+              <router-link class="qa-link" :to="{name: 'QADetail'}">
+                <td class="ellipsis">小林:</td>
+                <td class="ellipsis2">传说中的王者鸡爪，ogrk</td>
+              </router-link>
             </tr>
             </tbody>
           </table>
@@ -31,14 +28,14 @@
 <script>
 export default {
   name: 'QA',
-  data() {
+  data () {
     return {
-      list: [{}]
+      list: []
     }
   }
 }
 </script>
 
 <style scoped lang="scss">
-  @import "../../assets/scss/joblist";
+  @import "../../assets/scss/qa";
 </style>

@@ -75,7 +75,6 @@ export default {
         data: this.searchOptions
       })
         .then(res => {
-          console.log(res)
           let list = res.data.data.dataList
           this.jobs = [...this.jobs, ...list]
           let actualCount = list.length + (res.data.data.pageIndex - 1) * res.data.data.pageSize
