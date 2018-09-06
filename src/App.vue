@@ -3,7 +3,7 @@
     <transition name="slide-fade">
       <div>
         <header class="head">
-          <div class="logo-text">湖工小站</div>
+          <div class="logo-text"><span>湖工小站</span></div>
           <ul class="first--ul">
             <li><router-link class="color-f" :to="{name: 'JobList'}">实习内推</router-link></li>
             <li><router-link class="color-f" :to="{name: 'ArticleList'}">技术博客</router-link></li>

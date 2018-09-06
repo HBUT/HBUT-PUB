@@ -32,6 +32,11 @@ export default {
     return {
       list: []
     }
+  },
+  methods: {
+    publish () {
+      this.$router.push({name: 'QAForm'})
+    }
   }
 }
 </script>

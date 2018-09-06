@@ -67,6 +67,9 @@
 
   .head {
     justify-content: center;
+    .logo-text > span {
+      display: none;
+    }
     .ic-hanbao {
       position: absolute;
       right: 10px;

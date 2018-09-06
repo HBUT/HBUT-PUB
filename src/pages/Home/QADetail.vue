@@ -1,5 +1,7 @@
 <template>
+  <div class="qa-detail">
 
+  </div>
 </template>
 
 <script>
@@ -8,6 +10,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+@import "../../assets/scss/qadetail";
 </style>
