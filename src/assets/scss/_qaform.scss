@@ -1,0 +1,33 @@
+@import "reset";
+
+.qa-form {
+  width: calc(100vw - 60px);
+  margin: 30px auto;
+  min-height: calc(100vh - 120px);
+  background: #fff;
+  overflow-x: hidden;
+
+  > input {
+    width: 90%;
+    height: 30px;
+    margin: 30px auto;
+    border: 1px solid $primary-gray;
+    padding: 0 20px;
+
+  }
+
+  > textarea {
+    width: 90%;
+    height: 300px;
+    margin: 20px auto;
+    border: 1px solid $primary-gray;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 415px) {
+  .qa-form {
+    width: 800px;
+  }
+}
+

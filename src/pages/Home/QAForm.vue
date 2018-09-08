@@ -1,7 +1,9 @@
 <template>
-  <div>
-    <input type="text" v-model="title">
-    <textarea v-model="content" maxlength="300"></textarea>
+  <div class="qa-form">
+    <template>
+      <input type="text" class="f14" v-model="title" placeholder="请输入主题">
+      <textarea v-model="content" class="f14" maxlength="420" placeholder="请输入问题内容"></textarea>
+    </template>
   </div>
 </template>
 
@@ -18,5 +20,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import "../../assets/scss/qaform";
+  @import "../../assets/scss/qaform";
 </style>
