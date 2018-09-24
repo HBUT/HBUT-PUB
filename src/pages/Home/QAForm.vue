@@ -8,12 +8,19 @@
 </template>
 
 <script>
+import Validators from '@/components/Validators'
+
 export default {
   name: 'QAForm',
   data () {
     return {
       title: '',
       content: ''
+    }
+  },
+  methods: {
+    submitForm() {
+
     }
   }
 }

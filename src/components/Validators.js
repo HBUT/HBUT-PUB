@@ -3,7 +3,7 @@
  * Date: 28/08/2018
  * Time: 9:21 PM
  */
-class Validators {
+export default class Validators {
   static check ({value, pattern, typeStr, message}) {
     Validators.operators.push(Validators.funcs[typeStr].bind(value, pattern, message))
   }

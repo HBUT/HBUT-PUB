@@ -7,8 +7,8 @@
             <tbody>
             <tr>
               <router-link class="qa-link" :to="{name: 'QADetail'}">
-                <td class="ellipsis">小林:</td>
-                <td class="ellipsis2">传说中的王者鸡爪，ogrk</td>
+                <td class="ellipsis">{{item.title}}</td>
+                <td class="ellipsis2">{{item.content}}</td>
               </router-link>
             </tr>
             </tbody>
@@ -26,16 +26,33 @@
 </template>
 
 <script>
+import {LIST_QUESTION_BY_TYPE} from '@/api_routes'
 export default {
   name: 'QA',
   data () {
     return {
-      list: []
+      list: [],
+      page: 1
     }
+  },
+  mounted () {
+    this.next()
   },
   methods: {
     publish () {
       this.$router.push({name: 'QAForm'})
+    },
+    async next () {
+      const {data} = await this.$http.get({
+        url: LIST_QUESTION_BY_TYPE,
+        data: {
+          pageIndex: this.page,
+          pageSize: 15
+        }
+      })
+    },
+    loadMore() {
+
     }
   }
 }
