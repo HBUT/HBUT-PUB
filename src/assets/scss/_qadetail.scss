@@ -2,21 +2,45 @@
 
 .qa-detail {
   width: 100%;
+  .question {
+    li {
+      border: 1px solid #fff;
+    }
+  }
+
+  .answer {
+    li {
+      min-height: 40px;
+      .content {
+        margin-top: 0;
+      }
+    }
+  }
   ul {
     li {
-      height: 80px;
+      border: 1px solid #008a00;
+      min-height: 80px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin-bottom: 10px;
       background: #fff;
+      padding: 10px;
+      box-sizing: border-box;
+      .title {
+        text-align: center;
+      }
+      .content {
+        text-align: left;
+        margin-top: 10px;
+      }
     }
   }
 }
 
-
 @media (min-width: 415px) {
   .qa-detail {
     width: 800px;
+    margin: 10px auto;
   }
 }

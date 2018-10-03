@@ -62,7 +62,7 @@ export default {
         this.more = data.data.totalCount > data.data.pageSize * data.data.pageIndex + data.data.dataList.length
       }
     },
-    loadMore() {
+    loadMore () {
       if (this.more) {
         this.page += 1
         this.next()

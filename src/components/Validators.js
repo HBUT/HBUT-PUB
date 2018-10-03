@@ -33,7 +33,6 @@ export default class Validators {
 Validators.operators = []
 Validators.funcs = {
   IS_NOT_EMPTY: function (value, message, pattern) {
-    console.log(!value)
     if (pattern) {
       return {
         boolFlag: !value.test(pattern),
@@ -42,6 +41,12 @@ Validators.funcs = {
     }
     return {
       boolFlag: !value,
+      message
+    }
+  },
+  EXCEED_MAX_LENGTH: function (value, message, length) {
+    return {
+      boolFlag: value && (value.length > length),
       message
     }
   }
