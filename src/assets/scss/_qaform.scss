@@ -23,6 +23,17 @@
     border: 1px solid $primary-gray;
     padding: 20px;
   }
+  .submit-btn {
+    margin: 20px auto;
+    width: 60px;
+    height: 40px;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    background: #666666;
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 415px) {

@@ -11,6 +11,7 @@ const ArticleList = () => import('../pages/Home/ArticleList')
 const ArticleDetail = () => import('../pages/Home/ArticleDetail')
 const QA = () => import('../pages/Home/QA')
 const QAForm = () => import('../pages/Home/QAForm')
+const QADetail = () => import('../pages/Home/QADetail')
 
 Vue.use(Router)
 
@@ -54,6 +55,11 @@ export default new Router({
           path: '/qaform',
           name: 'QAForm',
           component: QAForm
+        },
+        {
+          path: '/qadetail',
+          name: 'QADetail',
+          component: QADetail
         }
       ]
     }, {

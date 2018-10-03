@@ -2,5 +2,21 @@
 
 .qa-detail {
   width: 100%;
+  ul {
+    li {
+      height: 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-bottom: 10px;
+      background: #fff;
+    }
+  }
+}
 
+
+@media (min-width: 415px) {
+  .qa-detail {
+    width: 800px;
+  }
 }
