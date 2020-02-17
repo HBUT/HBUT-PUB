@@ -2,7 +2,7 @@
   <div>
     <template v-if="!loading">
       <ul class="rec-container">
-        <li v-for="item in list">
+        <li v-for="(item, idx) in list" :key="idx">
           <table class="left-content">
             <tbody>
             <tr>
