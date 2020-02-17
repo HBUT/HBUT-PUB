@@ -4,7 +4,7 @@
  * Time: 16:12
  */
 import axios from 'axios'
-import {REQUEST_URL} from '../config'
+import {REQUEST_URL} from '../../commonConfig'
 
 export default class Ajax {
   constructor () {
